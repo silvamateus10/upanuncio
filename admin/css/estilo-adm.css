@@ -1,0 +1,58 @@
+body{
+	margin-right:-10px;
+}
+
+div#banner {
+    background-color: rgba(252, 226, 15, 1);
+    margin: -10px -8px 0px -8px;
+	width:100%;
+	
+}
+div#banner img#centro {
+    position: absolute;
+    left: 30%;
+}
+div#banner img#logo {
+    position: reference;
+}
+
+
+nav#menu ul {
+    padding: 0px;
+    margin: 0px -8px 0px -8px;
+    background-color: rgba(55,184,253,1);
+    list-style: none;
+    text-align: center;
+    position: reference;
+    font-family: arial;
+	width:100%;
+}
+nav#menu li {
+    display: inline-block;
+    padding: 15px;
+    -webkit-transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -ms-transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
+    transition: background-color 0.5s;
+    position: relative;
+    text-align: center;
+    width: 15%;
+    margin: auto 10px auto 10px;
+}
+nav#menu li:hover {
+    background-color: rgba(2,136,208,1);
+}
+nav#menu a {
+    text-decoration: none;
+	font-family: Arial, sans-serif;
+    font-size: 16pt;
+	color: white;
+	font-weight: bold;
+	text-shadow: 1px 1px rgba(0,0,0,1);
+}
+
+#botao-1{
+	margin-top: 5%;
+	margin-left: 7%;
+}

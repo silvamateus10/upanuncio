@@ -1,0 +1,111 @@
+.galeria{
+	width: 40%;
+	height:100%;
+	min-height: 500px;
+	background-color: rgba(0,0,0,0);
+	margin-top: 10px;
+	margin-right: 25px;
+	margin-bottom: 20px;
+	float:left;
+	box-shadow: 5px 5px 10px rgba(0,0,0,.5);
+	border: 1px rgba(2,136,208,1) solid;
+}
+
+img{
+	max-width:100%;
+}
+
+.thumbs{
+	float:left;
+	margin-top:20px;
+	padding:2.5px;
+	
+}
+
+.thumbs img{
+	float:left;
+	width:20%;
+	cursor: pointer;
+	padding:2.5px;
+	
+}
+
+.thumbs img:hover{
+background: #99ccff;
+}
+
+.thumbs img.active{
+background: #99ccff;
+}
+div#descricao{
+	width: 50%;
+	height:100%;
+	min-height: 500px;
+	background-color: rgba(0,0,0,0);
+	margin-top: 10px;
+	margin-left: 25px;
+	margin-bottom: 20px;
+	float:left;
+	box-shadow: 5px 5px 10px rgba(0,0,0,.5);
+	border: 1px rgba(2,136,208,1) solid;
+	position:relative;
+}
+
+div#descricao p#descricao-anuncio {
+	font-family: arial;
+    text-align: justify;
+    text-indent: 20px;
+	color: black;
+	font-size: 13pt;
+	margin: 5px;
+}
+
+.anuncio-nome{
+	width:100%;
+	height: 100%;
+	min-height:110px;
+	background-color: rgba(2,136,208,1);
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.anuncio-nome p {
+	font-family: arial;
+    text-align: justify;
+    text-indent: 10px;
+	color: white;
+	font-size: 14pt;
+	font-weight: bold;
+	text-shadow: 1px 1px rgba(0,0,0,1);
+	margin-top: 0px;
+}
+
+div#footer-anuncio{
+	background-color: rgba(0,0,0,0); 
+	margin-top: 5px;
+    width: 100%;
+    height: 100px;
+    clear: both;
+    bottom: 0;
+    font-family: arial;
+	position:absolute;
+}
+
+div#footer-anuncio img{
+	margin-top: 10px;
+	margin-left: 20px;
+	margin-right: 20%;
+	float:right;
+	
+}
+
+div#footer-anuncio p{
+	font-family: arial;
+    text-align: center;
+	color: black;
+	font-size: 13pt;
+	font-weight: bold;
+	margin-top: 5px;
+	float:right;
+	margin-top:20px;
+}

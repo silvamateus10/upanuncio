@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <meta charset="UTF-8"/>
+      <title>Up Anúncios</title>
+           <link rel="stylesheet" href="_css/estilo-teste.css"/>
+	  <link rel="stylesheet" href="_css/pesquisarCss.css"/>
+	  <link rel="stylesheet" href="_css/formVendedor.css"/>
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>     
+        <script src="js/jquery-3.2.1.min.js"></script>				
+        <script src="js/jquery.maskedinput.js"></script>				
+        <script src="js/jquery.maskedinput.min.js"></script>
+          <script>
+              
+                  function validarFrm(){                                                               
+                    VerificaCPF();                                             
+                    } 
+              
+              //Pegar Números
+            function VerificaCPF() {
+                cpf = document.frmVendedor.cpfVendedor.value;
+                var numCpf = cpf.replace(/[^0-9]/g, '');
+                if (validaCPF(numCpf))
+                {
+                  document.frmVendedor.submit();
+                } else
+                {
+                    errors = "1";
+                    if (errors)
+                        alert('CPF Inválido!');
+                    document.retorno = (errors == '');
+                }
+            }
+
+            //Valídar o CPF
+            function validaCPF(cpf)
+            {
+                if (cpf.length != 11 || cpf == "00000000000" || cpf == "11111111111" || cpf == "22222222222" || cpf == "33333333333" || cpf == "44444444444" || cpf == "55555555555" || cpf == "66666666666" || cpf == "77777777777" || cpf == "88888888888" || cpf == "99999999999")
+                    return false;
+                add = 0;
+                for (i = 0; i < 9; i ++)
+                    add += parseInt(cpf.charAt(i)) * (10 - i);
+                rev = 11 - (add % 11);
+                if (rev == 10 || rev == 11)
+                    rev = 0;
+                if (rev != parseInt(cpf.charAt(9)))
+                    return false;
+                add = 0;
+                for (i = 0; i < 10; i ++)
+                    add += parseInt(cpf.charAt(i)) * (11 - i);
+                rev = 11 - (add % 11);
+                if (rev == 10 || rev == 11)
+                    rev = 0;
+                if (rev != parseInt(cpf.charAt(10)))
+                    return false;
+             
+                return true;
+            }
+            
+            
+          </script>    
+       
+        <script>
+            jQuery(function ($) {
+                $("#cpfVendedor").mask("999.999.999-99");
+            });
+        </script>
+          
+          
+   </head>
+   <body>
+      <div id="banner">
+         <img src="_imagens/logo.png" id="logo"/>
+         <img src="_imagens/capa.jpg" id="centro"/>
+      </div>
+      <nav id="menu">
+         <ul type="disc">
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="sobre.html">SOBRE</a></li>
+            <li><a href="anunciar.php">ANUNCIAR</a></li>
+            <li><a href="pesquisar.php">PESQUISAR</a></li>
+            <li><a href="contato.html">CONTATO</a></li>
+         </ul>
+      </nav>
+      <div id="interface">
+         <div class="conteudo-unico">
+			
+			<div class="conteudo-inicial">
+				<p class="paragrafo-sobre">
+				   A UP Anúncios é uma empresa nova, nosso objetivo é expandir seu comércio seja ele de pequeno, médio ou grande porte.
+				   Viemos no mercado para fazer a diferença, e destacar sua empresa no mercado.
+				   Temos um amplo meio de divulgações como, aplicativo, redes sociais, revistas impressas e o nosso site.</br></br>
+				<p class="paragrafo-sobre">Venha para a UP Anúncios, e se destaque entre vários!</p>
+				
+			</div>
+			
+			<div class="planos">
+				<div class="fundo-plano">
+					<h1 class="titulo-plano">Plano Trimestral</h1>
+				</div>	
+				<p class="paragrafo-sobre">Durante o plano trimestral será taxado uma quantia de R$100,00 por mes. Durante um periodo de 3 meses.</br>
+				O plano conta com direito a 4 imagens por anuncio, caso seja necessário uma quantidade maior de imagens será taxado uma quantida de R$15,00 por imagem adicional.</p>
+			</div>
+			
+			<div class="planos">
+				<div class="fundo-plano">
+				<h1 class="titulo-plano">Plano Semestral</h1>
+				<p class="paragrafo-sobre">Durante o plano trimestral será taxado uma quantia de R$80,00 por mes. Durante um periodo de 6 meses.</br>
+				O plano conta com direito a 4 imagens por anuncio, caso seja necessário uma quantidade maior de imagens será taxado uma quantida de R$15,00 por imagem adicional.</p>
+				</div>	
+			</div>
+
+			<div class="divulgacao">
+				<div class="fundo-plano">
+					<h1 class="titulo-plano">Divulgação</h1>
+					<p class="paragrafo-sobre">Ambos os planos trimestral e semestral contam com a vantagem de divulgação dos seus anuncios nos seguintes meios de comunicação:  </p>
+					<ul type="disc" class="lista-divulgacao">
+						<li><a href="">FACEBOOK</a></li>
+						<li><a href="">SITE</a></li>
+						<li><a href="">APLICATIVO</a></li>
+						<li><a href="">REVISTA IMPRESSA E ONLINE</a></li>
+						<li><a href="">INSTAGRAM</a></li>
+						<li><a href="">YOUTUBE</a></li>
+						<li><a href="">TV ONLINE</a></li>
+					</ul>
+				</div>	
+			</div>
+									
+			<div class="revista">
+				<div class="fundo-plano">
+				<h1 class="titulo-plano">Revista</h1>
+				
+				<p class="paragrafo-sobre">Essas revistas serão entregues, em pontos de maior movimentação de pedestres, tornando assim os anúncios mais visíveis. 
+				Serão impressas 5 mil unidades para distribuição. Sendo que os anúncios na revista serão básicos, apenas para uma apresentação simples, os anúncios mais elaborados estarão nos outros meios de divulgação.
+				Os anuncios serão separados por região. E a revista também sera disponibilizada de forma online para compartilhamento.				
+				</p>
+				</div>	
+			</div>
+			
+			<div class="vendedor">
+				<div class="fundo-plano">
+				<h1 class="titulo-plano">Quer fazer parte da equipe?</h1>
+					<p class="paragrafo-sobre">Deseja fazer parte do nosso quadro de vendedores? Preencha o formulário que entraremos em contato por e-mail.</p>
+						<div class="form-vendedor">
+                                     <form name="frmVendedor" method="POST" action="enviarvendedor.php">            
+					<label for="nome">Nome:</label>
+						<input type="text" id="nome-vendedor" placeholder="" required="required" name="nome" /><br/>
+						
+					<label for="rg">RG:</label>
+                                        <input type="text" id="rg-vendedor" maxlength="10"  required="required" name="rg" placeholder="(apenas números)"/><br/>
+					
+					<label for="cpf">CPF:</label>
+					<input type="text" id="cpfVendedor" placeholder="" required="required" name="cpf" /><br/>
+					
+					<label for="cpf">E-mail:</label>
+					<input type="text" id="email-vendedor" placeholder="" required="required" name="email" /><br/>
+					
+					<label for="descricao-vendedor">Descrição:</label><br/>
+					<textarea name="descricao" placeholder="Fale sobre um pouco sobre você"></textarea>
+					
+					
+					<input id="button-enviar" type="button" value="Enviar" onClick="validarFrm();" name="btnEnviar"/>
+					
+					<div class="button-pdf-vendedor"><a href="_documentos/vendedor.pdf" target="_blank">.PDF</a></div>
+                                      </form>
+						</div>
+					
+					</div>
+			</div>
+			
+            <div class="button"><a href="_documentos\planos.pdf" target="_blank">Veja nossa Proposta</a></div>
+
+         </div>
+         <div id="footer-geral">
+            <div id="footer-1">
+               <ul type="disc">
+                  <li><a href="sobre.html">Sobre</a></li>
+                  <li><a href="anunciar.php">Anunciar</a></li>
+                  <li><a href="pesquisar.php">Pesquisar</a></li>
+                  <li><a href="contato.html">Contato</a></li>
+               </ul>
+            </div>
+            <div id="footer-2">
+               <ul type="disc">
+                  <li><a href="">Cupons</a></li>
+                  <li><a href="sobre.html#vend">Seja um Vendedor</a></li>
+                  <li><a href="">Parceiros</a></li>
+                  <li><a href="http://www.youblisher.com/p/1789619-UP-Anuncios/" target="_blank">Revista Online</a></li>
+               </ul>
+            </div>
+            <div id="footer-3">
+               <figure class="foto-legenda">
+                  <figcaption>Nos siga nas redes sociais!</figcaption>
+                  <a href="https://www.instagram.com/up_anuncios/?hl=pt-br" target="_blank"><img src="_imagens\instagram-icon2.jpg"/></a>
+                  <a href="https://www.facebook.com/fpm.upanuncios/" target="_blank"><img src="_imagens\facebook-icon.jpg"/></a>
+               </figure>
+               <div class="aplicativo">
+                  <figcaption>Aplicativo</figcaption>
+                  <a href=""><img src="_imagens\googleplay-banner.jpg" id="aplicativo"/></a>
+               </div>
+            </div>
+            <div class="footer-4">
+               <figure class="foto-legenda2">
+                  <figcaption>Formas de pagamento:</figcaption>
+                  <img src="_imagens\boleto-icon.jpg"/>
+                  <img src="_imagens\caixa-icon.jpg"/>
+               </figure>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

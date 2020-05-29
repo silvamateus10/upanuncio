@@ -1,0 +1,47 @@
+form {
+    font-family: Arial, sans-serif;
+    font-size: 16pt;
+	font-weight: bold;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0);
+	color: white;
+	font-weight: bold;
+	text-shadow: 1px 1px rgba(0,0,0,1);
+}
+
+input {
+    width: 40%;
+    padding: 5px;
+    color: black;
+    margin-left: 50px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border: 1px solid;
+	float:right;
+	margin-right:10px;
+}
+
+input#botao{
+	float: right;
+	margin-right: 10%;
+	margin-top: 10px;
+}
+.titulo-alterar-senha{
+	text-align: center;
+}
+
+.fundo-alterar-senha{
+	background-color: rgba(2,136,208,1);
+	height:65px; 
+	padding-top: 2px;
+	position: reference;
+	margin-bottom: 10px;
+	}
+.alterar-senha{
+	width: 550px;
+	height: 380px;
+	background-color: rgba(55,184,253,1);
+	margin-left: 27%;
+	margin-top: 20px;
+	box-shadow: 5px 5px 10px rgba(0,0,0,.5);
+}
